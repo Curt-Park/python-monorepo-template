@@ -1,9 +1,9 @@
-# Python Mmonorepo Template
+# Python Monorepo Template
 
-Python Monorepo Temlate with [Pants](https://www.pantsbuild.org/).
+Python Monorepo Template with [Pants](https://www.pantsbuild.org/).
 
 ## Items
-- [x] Small python projects with dependency
+- [x] Small Python projects with dependency
 - [x] Project execution
 - [x] Formatting (black, isort)
 - [x] Linting (flake8, pylint, pydocstyle)
