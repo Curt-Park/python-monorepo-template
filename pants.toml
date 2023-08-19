@@ -2,6 +2,7 @@
 pants_version = "2.16.0"
 backend_packages = [
   "pants.backend.python",
+  "pants.backend.docker",
   # run `pants py-constraints ::` to check the python version constraints.
   "pants.backend.python.mixed_interpreter_constraints",
   # formatters
@@ -44,6 +45,8 @@ report = [
     "html",
 ]
 
+[docker]
+env_vars = ["DOCKER_CONFIG=%(env.HOME)s/.docker", "HOME", "USER", "PATH"]
 
 [python.resolves]
 # Run `pants generate-lockfiles` to generate locks.

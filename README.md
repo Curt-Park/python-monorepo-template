@@ -8,7 +8,7 @@ Python Monorepo Temlate with [Pants](https://www.pantsbuild.org/).
 - [x] Formatting (black, isort)
 - [x] Linting (flake8, pylint, pydocstyle)
 - [x] Unit Test
-- [ ] Docker build
+- [x] Docker build
 - [ ] GitHub actions
 
 ## Project Structure
@@ -51,8 +51,14 @@ pants lint libs/fancy::  # for fancy
 pants test ::            # for all projects
 pants test libs/base::   # for base
 pants test libs/fancy::  # for fancy
+
+# Build docker images
+pants package docker/Dockerfile.base    # build base
+pants package docker/Dockerfile.fancy   # build fancy
 ```
 
 ## References
+- https://www.pantsbuild.org/docs
 - https://github.com/pantsbuild/example-python
+- https://github.com/pantsbuild/example-docker
 - https://github.com/tweag/python-monorepo-example
