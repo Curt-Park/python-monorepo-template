@@ -37,4 +37,5 @@ use_coverage = true
 report = [
     "console",
     "xml",
+    "html",
 ]
