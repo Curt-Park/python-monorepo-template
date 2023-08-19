@@ -1,4 +1,4 @@
-"""Main."""
+"""Main"""
 
 from libs.base.base import adder2
 
