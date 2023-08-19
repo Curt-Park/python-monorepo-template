@@ -8,8 +8,8 @@ backend_packages = [
   "pants.backend.python.lint.docformatter",
   # linters
   "pants.backend.python.lint.flake8",
-  "pants.backend.python.lint.pydocstyle",
   "pants.backend.python.lint.pylint",
+  "pants.backend.python.lint.pydocstyle",
 ]
 
 [source]

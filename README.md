@@ -7,7 +7,7 @@ Python Monorepo Temlate with [Pants](https://www.pantsbuild.org/).
 - [x] Project execution
 - [x] Formatting (black, isort)
 - [x] Linting (flake8, pylint, pydocstyle)
-- [ ] Unit Test
+- [x] Unit Test
 - [ ] Docker build
 - [ ] GitHub actions
 
@@ -39,13 +39,18 @@ pants run libs/fancy/main.py
 
 # How to format
 pants fmt ::             # for all projects
-pants fmt libs:base::    # for base
-pants fmt libs:fancy::   # for fancy
+pants fmt libs/base::    # for base
+pants fmt libs/fancy::   # for fancy
 
 # How to lint
 pants lint ::            # for all projects
-pants lint libs:base::   # for base
-pants lint libs:fancy::  # for fancy
+pants lint libs/base::   # for base
+pants lint libs/fancy::  # for fancy
+
+# How to run unit tests
+pants test ::            # for all projects
+pants test libs/base::   # for base
+pants test libs/fancy::  # for fancy
 ```
 
 ## References
