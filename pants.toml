@@ -25,3 +25,7 @@ root_patterns = ["/"]
 # This can be a range, such as [">=3.8,<3.11"], but it's usually recommended to restrict
 # to a single minor version.
 interpreter_constraints = ["==3.10.*"]
+
+[anonymous-telemetry]
+# Pants can optionally send anonymized telemetry to the Pants project.
+enabled = false
