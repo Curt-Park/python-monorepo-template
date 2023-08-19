@@ -29,3 +29,12 @@ interpreter_constraints = ["==3.10.*"]
 [anonymous-telemetry]
 # Pants can optionally send anonymized telemetry to the Pants project.
 enabled = false
+
+[test]
+use_coverage = true
+
+[coverage-py]
+report = [
+    "console",
+    "xml",
+]
