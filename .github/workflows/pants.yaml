@@ -25,7 +25,7 @@ jobs:
         gha-cache-key: v0
         # The Python backend uses named_caches for Pip/PEX state,
         # so it is appropriate to invalidate on lockfile changes.
-        named-caches-hash: ${{ hashFiles('3rdparty/python/default.lock') }}
+        named-caches-hash: ${{ hashFiles('3rdparty/**/*.lock') }}
         # If you're not using a fine-grained remote caching service (see https://www.pantsbuild.org/docs/remote-caching),
         # then you may also want to preserve the local Pants cache (lmdb_store). However this must invalidate for
         # changes to any file that can affect the build, so may not be practical in larger repos.
