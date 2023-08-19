@@ -1,6 +1,6 @@
 """Tests of adder3."""
 
-from fancy import adder3
+from libs.fancy.fancy import adder3
 
 
 def test_zero() -> None:
@@ -9,12 +9,6 @@ def test_zero() -> None:
     assert adder3.add3(0, 1, 0) == 1
     assert adder3.add3(0, 1, 2) == 3
     assert adder3.add3(1, 2, 0) == 3
-
-
-def test_add2_add3() -> None:
-    """Test relation between add2 and add3."""
-    assert adder3.add3(1, 2, 3) == 6
-    assert adder3.add3(1, 2, 0) == 2
 
 
 def test_some() -> None:

@@ -7,6 +7,7 @@ def add2(x: int, y: int) -> int:
     Args:
         x: the left operand
         y: the right operand
+
     Returns:
         The sum of x and y
     """

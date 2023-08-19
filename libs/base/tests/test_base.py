@@ -1,6 +1,6 @@
 """Tests of adder2."""
 
-from base import adder2
+from libs.base.base import adder2
 
 
 def test_zero() -> None:

@@ -1,0 +1,21 @@
+[GLOBAL]
+pants_version = "2.16.0"
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.isort",
+]
+
+[source]
+# The Python source root is the repo root. See https://www.pantsbuild.org/docs/source-roots.
+root_patterns = ["/"]
+
+[python]
+# The default interpreter constraints for code in this repo. Individual targets can override
+#  this with the `interpreter_constraints` field. See
+#  https://www.pantsbuild.org/docs/python-interpreter-compatibility.
+
+# Modify this if you don't have Python 3.9 on your machine.
+# This can be a range, such as [">=3.8,<3.11"], but it's usually recommended to restrict
+# to a single minor version.
+interpreter_constraints = ["==3.10.*"]

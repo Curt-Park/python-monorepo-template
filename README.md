@@ -3,10 +3,9 @@
 Python Monorepo Temlate with [Pants](https://www.pantsbuild.org/).
 
 ## Items
-- [ ] Small python projects with dependency
-- [ ] Project setup
-- [ ] Project execution
-- [ ] Formatting (black, isort)
+- [x] Small python projects with dependency
+- [x] Project execution
+- [x] Formatting (black, isort)
 - [ ] Linting (flake8, pylint, pyright)
 - [ ] Unit Test
 - [ ] Docker build
@@ -33,7 +32,21 @@ brew install pantsbuild/tap/pants
 ```
 
 ## How to run
-TBD
+```bash
+# How to execute
+pants run libs/base/main.py
+pants run libs/fancy/main.py
+
+# How to format
+pants fmt ::             # for all projects
+pants fmt libs:base::    # for base
+pants fmt libs:fancy::   # for fancy
+
+# How to lint
+pants lint ::            # for all projects
+pants lint libs:base::   # for base
+pants lint libs:fancy::  # for fancy
+```
 
 ## References
 - https://github.com/pantsbuild/example-python
