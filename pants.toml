@@ -2,6 +2,8 @@
 pants_version = "2.16.0"
 backend_packages = [
   "pants.backend.python",
+  # run `pants py-constraints ::` to check the python version constraints.
+  "pants.backend.python.mixed_interpreter_constraints",
   # formatters
   "pants.backend.python.lint.black",
   "pants.backend.python.lint.isort",
@@ -26,6 +28,8 @@ root_patterns = ["/"]
 # to a single minor version.
 interpreter_constraints = ["==3.10.*"]
 
+enable_resolves = true
+
 [anonymous-telemetry]
 # Pants can optionally send anonymized telemetry to the Pants project.
 enabled = false
@@ -39,3 +43,43 @@ report = [
     "xml",
     "html",
 ]
+
+
+[python.resolves]
+# Run `pants generate-lockfiles` to generate locks.
+python-default  = "3rdparty/python/default.lock"
+black           = "3rdparty/fmt/black.lock"
+isort           = "3rdparty/fmt/isort.lock"
+docformatter    = "3rdparty/fmt/docformatter.lock"
+flake8          = "3rdparty/lint/flake8.lock"
+pylint          = "3rdparty/lint/pylint.lock"
+pydocstyle      = "3rdparty/lint/pydocstyle.lock"
+pytest          = "3rdparty/test/pytest.lock"
+
+[black]
+install_from_resolve = "black"
+requirements =["//3rdparty/fmt:black"]
+
+[isort]
+install_from_resolve = "isort"
+requirements =["//3rdparty/fmt:isort"]
+
+[docformatter]
+install_from_resolve = "docformatter"
+requirements =["//3rdparty/fmt:docformatter"]
+
+[flake8]
+install_from_resolve = "flake8"
+requirements =["//3rdparty/lint:flake8"]
+
+[pylint]
+install_from_resolve = "pylint"
+requirements =["//3rdparty/lint:pylint"]
+
+[pydocstyle]
+install_from_resolve = "pydocstyle"
+requirements =["//3rdparty/lint:pydocstyle"]
+
+[pytest]
+install_from_resolve = "pytest"
+requirements =["//3rdparty/test:pytest"]
