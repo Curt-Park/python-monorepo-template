@@ -45,9 +45,6 @@ report = [
     "html",
 ]
 
-[docker]
-env_vars = ["DOCKER_CONFIG=%(env.HOME)s/.docker", "HOME", "USER", "PATH"]
-
 [python.resolves]
 # Run `pants generate-lockfiles` to generate locks.
 python-default  = "3rdparty/python/default.lock"
