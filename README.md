@@ -9,7 +9,7 @@ Python Monorepo Temlate with [Pants](https://www.pantsbuild.org/).
 - [x] Linting (flake8, pylint, pydocstyle)
 - [x] Unit Test
 - [x] Docker build
-- [ ] GitHub actions
+- [x] GitHub actions
 
 ## Project Structure
 ```bash
