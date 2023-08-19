@@ -62,14 +62,17 @@ pytest          = "3rdparty/test/pytest.lock"
 [black]
 install_from_resolve = "black"
 requirements =["//3rdparty/fmt:black"]
+interpreter_constraints = ["==3.10.*"]
 
 [isort]
 install_from_resolve = "isort"
 requirements =["//3rdparty/fmt:isort"]
+interpreter_constraints = ["==3.10.*"]
 
 [docformatter]
 install_from_resolve = "docformatter"
 requirements =["//3rdparty/fmt:docformatter"]
+interpreter_constraints = ["==3.10.*"]
 
 [flake8]
 install_from_resolve = "flake8"
@@ -82,6 +85,7 @@ requirements =["//3rdparty/lint:pylint"]
 [pydocstyle]
 install_from_resolve = "pydocstyle"
 requirements =["//3rdparty/lint:pydocstyle"]
+interpreter_constraints = ["==3.10.*"]
 
 [pytest]
 install_from_resolve = "pytest"
