@@ -1,4 +1,4 @@
-"""Example module of the base library"""
+"""Example module of the base library."""
 
 
 def add2(x: int, y: int) -> int:

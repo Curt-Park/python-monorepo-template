@@ -1,4 +1,4 @@
-"""Example module of the fancy library"""
+"""Example module of the fancy library."""
 
 from libs.base.base.adder2 import add2
 

@@ -4,7 +4,7 @@ from libs.fancy.fancy import adder3
 
 
 def test_zero() -> None:
-    """Test of add3 with zero"""
+    """Test of add3 with zero."""
     assert adder3.add3(0, 0, 0) == 0
     assert adder3.add3(0, 1, 0) == 1
     assert adder3.add3(0, 1, 2) == 3

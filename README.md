@@ -6,7 +6,7 @@ Python Monorepo Temlate with [Pants](https://www.pantsbuild.org/).
 - [x] Small python projects with dependency
 - [x] Project execution
 - [x] Formatting (black, isort)
-- [ ] Linting (flake8, pylint, pyright)
+- [x] Linting (flake8, pylint, pydocstyle)
 - [ ] Unit Test
 - [ ] Docker build
 - [ ] GitHub actions

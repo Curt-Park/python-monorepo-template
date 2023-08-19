@@ -2,8 +2,14 @@
 pants_version = "2.16.0"
 backend_packages = [
   "pants.backend.python",
+  # formatters
   "pants.backend.python.lint.black",
   "pants.backend.python.lint.isort",
+  "pants.backend.python.lint.docformatter",
+  # linters
+  "pants.backend.python.lint.flake8",
+  "pants.backend.python.lint.pydocstyle",
+  "pants.backend.python.lint.pylint",
 ]
 
 [source]
